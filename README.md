@@ -1,5 +1,6 @@
 # PCI ABEILLE IMS Version
-<img src="./PCI-Abeille-IMS-Version/tree/master/interaction/creator/img/icon.svg" alt="Abeille" title="Abeille PCI">
+<img src="https://www.wiquid.fr/projects/depp/PCI-icons/abeille.svg" alt="Abeille" title="Abeille PCI">
+
 
 ## Installation 
 This repository is dedicated to Abeille PCI. If you want to download all DEPP-Wiquid PCIs in a row, go to [Extension-Wiquid-Depp](https://github.com/janfix/Extension-Wiquid-Depp).
