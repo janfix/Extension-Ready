@@ -18,3 +18,5 @@ The results are in JSON format.
 
 
 ![logo]: https://www.wiquid.fr/wp-content/uploads/2021/12/cropped-cropped-WonderP50.png
+
+<img src="https://www.wiquid.fr/wp-content/uploads/2021/12/cropped-cropped-WonderP50.png" alt="Wiquid" title="Wiquid">
