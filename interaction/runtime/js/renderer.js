@@ -17,12 +17,12 @@
  *
  */
 define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
-    'abeillePCI/interaction/runtime/js/assets',
-    'abeillePCI/interaction/runtime/js/lib/raphael.min',
-    'lodash',
-    'css!abeillePCI/interaction/runtime/css/abeille'
-],
-    function ($, assets, Raphael, _) {
+        'abeillePCI/interaction/runtime/js/assets',
+        'abeillePCI/interaction/runtime/js/lib/raphael.min',
+        'lodash',
+        'css!abeillePCI/interaction/runtime/css/abeille'
+    ],
+    function($, assets, Raphael, _) {
 
         'use strict';
 
@@ -63,7 +63,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                 min: 0,
                 max: 2,
                 step: 1,
-                slide: function (event, ui) {
+                slide: function(event, ui) {
                     $(".pestiVal").val(ui.value);
                 }
             });
@@ -73,7 +73,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                 min: 0,
                 max: 2,
                 step: 1,
-                slide: function (event, ui) {
+                slide: function(event, ui) {
                     $(".frelonVal").val(ui.value);
                 }
             });
@@ -169,7 +169,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     abeille[i].scale(0.1, 0.1);
                     beeset.push(abeille[i]);
                 }
-                beeset.forEach(function (e) {
+                beeset.forEach(function(e) {
                     var ymob = getRandomArbitrary(150, 370);
                     if (xmob > 650) { xmob = 20; }
                     e.animate({ 'transform': "s1 1", x: xmob, y: ymob }, 2000);
@@ -191,11 +191,11 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
 
 
             function frelonflight(event) {
-                
+
                 if (event.type == "mouseup") {
                     var frelonvolant = paper.image(objfrelonvolant, 0, 50, 100, 68);
                     frelonvolant.scale(1);
-                    frelonvolant.animate({ 'x': 1000, 'y': 300, 'width': 300, 'height': 150 }, 6000, function () { this.remove(); });
+                    frelonvolant.animate({ 'x': 1000, 'y': 300, 'width': 300, 'height': 150 }, 6000, function() { this.remove(); });
                 }
 
             }
@@ -216,19 +216,28 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
             }
 
 
+            $container.find(".pesticide").on("click", function() {
+                pesticlick += 1;
+                $container.find(".pesticlick").html(pesticlick);
+            });
 
-            $container.find(".pesticide").on("mouseup mouseout", function (event) {
+            $container.find(".frelonslider").on("click", function() {
+                frelonclick += 1;
+                $container.find(".frelonclick").html(frelonclick);
+            });
+
+
+            $container.find(".pesticide").on("mouseup mouseout", function(event) {
 
                 beepresente = beeset.length;
 
                 var pestiValue = $(".pestiVal").val();
-                
+
 
                 var otherslider = $container.find('.frelonVal').val();
                 var actionbee;
 
-                pesticlick += 1;
-                $container.find(".pesticlick").html(pesticlick);
+
 
                 if (parseInt(pestiValue) === 0 && parseInt(otherslider) === 0) {
 
@@ -356,15 +365,14 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
             })
 
 
-            $container.find(".frelonslider").on("mouseup mouseout", function (event) {
+            $container.find(".frelonslider").on("mouseup mouseout", function(event) {
 
                 beepresente = beeset.length;
 
                 var frelonValue = $(".frelonVal").val();
                 var otherslider = $container.find('.pestiVal').val();
                 var i, actionbee;
-                frelonclick += 1;
-                $container.find(".frelonclick").html(frelonclick);
+
 
 
                 if (parseInt(frelonValue) === 0 && parseInt(otherslider) === 0) {
@@ -387,7 +395,10 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     showGroup(group4);
                     // population = 6
                     actionbee = 6 - beepresente;
-                    if (actionbee > 0) { beefly(actionbee); } else { frelonflight(event); beeremover(Math.abs(actionbee)); }
+                    if (actionbee > 0) { beefly(actionbee); } else {
+                        frelonflight(event);
+                        beeremover(Math.abs(actionbee));
+                    }
                     popu.remove();
                     population(60000);
 
@@ -418,7 +429,10 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
 
                     // population = 2
                     actionbee = 2 - beepresente;
-                    if (actionbee > 0) { beefly(actionbee); } else { frelonflight(event); beeremover(Math.abs(actionbee)); }
+                    if (actionbee > 0) { beefly(actionbee); } else {
+                        frelonflight(event);
+                        beeremover(Math.abs(actionbee));
+                    }
                     popu.remove();
                     population(20000);
                 }
@@ -434,7 +448,10 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
 
                     // population = 2
                     actionbee = 2 - beepresente;
-                    if (actionbee > 0) { beefly(actionbee); } else { frelonflight(event); beeremover(Math.abs(actionbee)); }
+                    if (actionbee > 0) { beefly(actionbee); } else {
+                        frelonflight(event);
+                        beeremover(Math.abs(actionbee));
+                    }
                     popu.remove();
                     population(20000);
                 }
@@ -450,7 +467,10 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
 
                     // population = 4
                     actionbee = 4 - beepresente;
-                    if (actionbee > 0) { beefly(actionbee); } else { frelonflight(event); beeremover(Math.abs(actionbee)); }
+                    if (actionbee > 0) { beefly(actionbee); } else {
+                        frelonflight(event);
+                        beeremover(Math.abs(actionbee));
+                    }
                     popu.remove();
                     population(40000);
                 }
@@ -480,7 +500,10 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
 
                     // population = 4
                     actionbee = 4 - beepresente;
-                    if (actionbee > 0) { beefly(actionbee); } else { frelonflight(event); beeremover(Math.abs(actionbee)); }
+                    if (actionbee > 0) { beefly(actionbee); } else {
+                        frelonflight(event);
+                        beeremover(Math.abs(actionbee));
+                    }
                     popu.remove();
                     population(40000);
                 }
@@ -505,14 +528,14 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
 
 
         return {
-            render: function (id, container, config, assetManager) {
+            render: function(id, container, config, assetManager) {
 
                 var $container = $(container);
 
                 renderChoices(id, $container, config);
 
             },
-            renderChoices: function (id, container, config) {
+            renderChoices: function(id, container, config) {
                 renderChoices(id, $(container), config);
             }
         };
