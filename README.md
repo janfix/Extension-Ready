@@ -1,6 +1,5 @@
 # PCI ABEILLE IMS Version
-![logo]:https://github.com/janfix/PCI-Abeille-IMS-Version/tree/master/interaction/creator/img/icon.svg
-<img src="https://github.com/janfix/PCI-Abeille-IMS-Version/tree/master/interaction/creator/img/icon.svg" alt="Abeille" title="Abeille PCI">
+<img src="./PCI-Abeille-IMS-Version/tree/master/interaction/creator/img/icon.svg" alt="Abeille" title="Abeille PCI">
 
 ## Installation 
 This repository is dedicated to Abeille PCI. If you want to download all DEPP-Wiquid PCIs in a row, go to [Extension-Wiquid-Depp](https://github.com/janfix/Extension-Wiquid-Depp).
@@ -15,8 +14,5 @@ It is just counting the click on the sliders : Pesticide and Hornet.
 The results are in JSON format.
 .pesticide_clicks
 .frelon_clicks
-
-
-![logo]: https://www.wiquid.fr/wp-content/uploads/2021/12/cropped-cropped-WonderP50.png
 
 <img src="https://www.wiquid.fr/wp-content/uploads/2021/12/cropped-cropped-WonderP50.png" alt="Wiquid" title="Wiquid">
