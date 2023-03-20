@@ -1,5 +1,7 @@
 # PCI ABEILLE IMS Version
 ![logo]:https://github.com/janfix/PCI-Abeille-IMS-Version/tree/master/interaction/creator/img/icon.svg
+<img src="https://github.com/janfix/PCI-Abeille-IMS-Version/tree/master/interaction/creator/img/icon.svg" alt="Abeille" title="Abeille PCI">
+
 ## Installation 
 This repository is dedicated to Abeille PCI. If you want to download all DEPP-Wiquid PCIs in a row, go to [Extension-Wiquid-Depp](https://github.com/janfix/Extension-Wiquid-Depp).
 If not, download the PCI, create a ZIP with the ImsPciCreator file at the root level, go to TAO platform, in the top right tool bar click on ⚙️ (settings)> Portable custom interaction and install it as a package.
