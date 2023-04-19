@@ -108,7 +108,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
             function population(pop) {
                 var accord;
                 if (pop === 0) { accord = 'abeille'; } else { accord = 'abeilles'; }
-                popu = paper.text(600, 70, 'Population de la ruche : ' + pop + ' ' + accord).attr({ 'font-size': 20 });
+                popu = paper.text(400, 415, 'Population de la ruche : ' + pop + ' ' + accord).attr({ 'font-size': 20, 'fill': '#ffffff' });
 
             }
 
@@ -216,16 +216,6 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
             }
 
 
-            $container.find(".pesticide").on("click", function() {
-                pesticlick += 1;
-                $container.find(".pesticlick").html(pesticlick);
-            });
-
-            $container.find(".frelonslider").on("click", function() {
-                frelonclick += 1;
-                $container.find(".frelonclick").html(frelonclick);
-            });
-
 
             $container.find(".pesticide").on("mouseup mouseout", function(event) {
 
@@ -237,7 +227,8 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                 var otherslider = $container.find('.frelonVal').val();
                 var actionbee;
 
-
+                pesticlick += 1;
+                $container.find(".pesticlick").html(pesticlick);
 
                 if (parseInt(pestiValue) === 0 && parseInt(otherslider) === 0) {
 
@@ -372,7 +363,8 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                 var frelonValue = $(".frelonVal").val();
                 var otherslider = $container.find('.pestiVal').val();
                 var i, actionbee;
-
+                frelonclick += 1;
+                $container.find(".frelonclick").html(frelonclick);
 
 
                 if (parseInt(frelonValue) === 0 && parseInt(otherslider) === 0) {
