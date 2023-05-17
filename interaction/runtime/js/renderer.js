@@ -103,12 +103,27 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
             var blueset = paper.set();
             var redset = paper.set();
             var yellowset = paper.set();
-            var popu;
+            var popu, TextBox;
 
             function population(pop) {
                 var accord;
                 if (pop === 0) { accord = 'abeille'; } else { accord = 'abeilles'; }
                 popu = paper.text(400, 415, 'Population de la ruche : ' + pop + ' ' + accord).attr({ 'font-size': 20, 'fill': '#ffffff' });
+                // Obtenir la boîte englobante du texte
+                var bbox = popu.getBBox();
+
+                // Création d'un rectangle en utilisant les dimensions de la boîte englobante
+                var padding = 5;
+                TextBox = paper.rect(bbox.x - padding, bbox.y - padding, bbox.width + 2 * padding, bbox.height + 2 * padding);
+
+                // Définition de la couleur de fond du rectangle
+                TextBox.attr({
+                    "fill": "grey",
+                    "fill-opacity": 0.7
+                });
+
+                // Pour que le texte apparaisse au-dessus du rectangle, nous devons le réinsérer.
+                popu.toFront();
 
             }
 
@@ -241,6 +256,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 8 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); }
                     popu.remove();
+                    TextBox.remove();
                     population(80000);
                 }
 
@@ -255,6 +271,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 6 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(60000);
                 }
 
@@ -269,6 +286,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 6 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(60000);
                 }
 
@@ -283,6 +301,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 2 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(20000);
                 }
 
@@ -297,6 +316,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 2 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(20000);
                 }
 
@@ -312,6 +332,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 4 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(40000);
                 }
 
@@ -326,6 +347,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 4 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(40000);
                 }
 
@@ -340,6 +362,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 4 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(40000);
                 }
 
@@ -351,6 +374,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
 
                     beeremover(beeset.length);
                     popu.remove();
+                    TextBox.remove();
                     population(0);
                 }
             })
@@ -376,6 +400,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 8 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(80000);
 
                 }
@@ -392,6 +417,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                         beeremover(Math.abs(actionbee));
                     }
                     popu.remove();
+                    TextBox.remove();
                     population(60000);
 
                 }
@@ -407,6 +433,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 6 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(60000);
                 }
 
@@ -426,6 +453,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                         beeremover(Math.abs(actionbee));
                     }
                     popu.remove();
+                    TextBox.remove();
                     population(20000);
                 }
 
@@ -445,6 +473,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                         beeremover(Math.abs(actionbee));
                     }
                     popu.remove();
+                    TextBox.remove();
                     population(20000);
                 }
 
@@ -464,6 +493,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                         beeremover(Math.abs(actionbee));
                     }
                     popu.remove();
+                    TextBox.remove();
                     population(40000);
                 }
 
@@ -478,6 +508,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                     actionbee = 4 - beepresente;
                     if (actionbee > 0) { beefly(actionbee); } else { beeremover(Math.abs(actionbee)); }
                     popu.remove();
+                    TextBox.remove();
                     population(40000);
                 }
 
@@ -497,6 +528,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                         beeremover(Math.abs(actionbee));
                     }
                     popu.remove();
+                    TextBox.remove();
                     population(40000);
                 }
 
@@ -511,6 +543,7 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
 
                     beeremover(beeset.length);
                     popu.remove();
+                    TextBox.remove();
                     population(0);
 
                 }
