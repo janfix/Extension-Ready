@@ -128,6 +128,12 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
             }
 
             population(80000);
+            setTimeout(() => {
+                console.log("SETTIMEOUT")
+                TextBox.toFront();
+                popu.toFront();
+            }, 2000);
+
 
             function getRandomArbitrary(min, max) {
                 return Math.random() * (max - min) + min;
