@@ -65,6 +65,8 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                 step: 1,
                 slide: function(event, ui) {
                     $(".pestiVal").val(ui.value);
+                    $(".posiPesti").html(ui.value).hide();
+                    $container.find(".allPosi").append('{"pesticide_curseur":' + ui.value + ',"frelon_curseur":' + $container.find(".posiFrelon").text() + '},')
                 }
             });
 
@@ -75,6 +77,8 @@ define(['abeillePCI/interaction/runtime/js/lib/jquery-ui',
                 step: 1,
                 slide: function(event, ui) {
                     $(".frelonVal").val(ui.value);
+                    $(".posiFrelon").html(ui.value).hide();
+                    $container.find(".allPosi").append('{"pesticide_curseur":' + $container.find(".posiPesti").text() + ',"frelon_curseur":' + ui.value + '},')
                 }
             });
 

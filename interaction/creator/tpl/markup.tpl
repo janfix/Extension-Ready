@@ -7,6 +7,12 @@
     <div class="quantiPesti"></div>
     <div class="quantiFrelon"></div>
 
+    <div class="posiPesti">0</div>
+    <div class="posiFrelon">0</div>
+    <div class="allPosi"></div>
+
+
+
 
 
 </div>

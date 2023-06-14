@@ -2,11 +2,17 @@
 Copyright DEPP © 2017 - Ministère de l'éducation nationale  
 */
 
+
 /*add some style, need to scope (using the typeIdentifier as class prefix) every style declaration to prevent collision */
 
+.qti-customInteraction .abeille .posiPesti,
+.qti-customInteraction .abeille .posiFrelon,
+.qti-customInteraction .abeille .allPosi {
+    display: none;
+}
 
-.qti-customInteraction .abeille .grador{
- background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJsAAAAUCAYAAACah0+BAAAACXBIWXMAAC4jAAAuIwF4pT92AAAA+UlEQVRoge3avQnCQBjG8efEzli4jnVWcAXb2OkIlo6gtSPoCq7gEsb6tUngkJwfqG+M/n8QnsCF4zgewgUSbCqTFCTyiay1vY5OZe9q40jyU6m4bMBH1WUz8rHcjNeSpCpbX0+Xsi5b26/YLmW8gd+wns5kMIvPu88LIdx/CD8r7s95NswlHQer07HpWc5seKedpElqkLLBDWWDG8oGN5QNboKZ6Twb7hLji8HqdLg5AV+jf6cssqmkUcPQUtK+uq5t+9VNnpi3aUJgonRn8sTYQWb20oX/FnehLDIri2ye6gpnNrihbHBD2eCGssENZYObl//6AB51Ac2QDL8HEwLcAAAAAElFTkSuQmCC');
+.qti-customInteraction .abeille .grador {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJsAAAAUCAYAAACah0+BAAAACXBIWXMAAC4jAAAuIwF4pT92AAAA+UlEQVRoge3avQnCQBjG8efEzli4jnVWcAXb2OkIlo6gtSPoCq7gEsb6tUngkJwfqG+M/n8QnsCF4zgewgUSbCqTFCTyiay1vY5OZe9q40jyU6m4bMBH1WUz8rHcjNeSpCpbX0+Xsi5b26/YLmW8gd+wns5kMIvPu88LIdx/CD8r7s95NswlHQer07HpWc5seKedpElqkLLBDWWDG8oGN5QNboKZ6Twb7hLji8HqdLg5AV+jf6cssqmkUcPQUtK+uq5t+9VNnpi3aUJgonRn8sTYQWb20oX/FnehLDIri2ye6gpnNrihbHBD2eCGssENZYObl//6AB51Ac2QDL8HEwLcAAAAAElFTkSuQmCC');
     width: 155px;
     height: 38px;
     background-position-y: 18px;
@@ -15,7 +21,7 @@ Copyright DEPP © 2017 - Ministère de l'éducation nationale
 }
 
 .qti-customInteraction .abeille .ui-slider .ui-state-default {
-  background-color: orange!important;
+    background-color: orange!important;
 }
 
 .qti-customInteraction .abeille .prompt {
@@ -107,28 +113,27 @@ Copyright DEPP © 2017 - Ministère de l'éducation nationale
 }
 
 .abeille .ui-slider {
-    
     border: 6px solid #c12a40!important;
     border-radius: 2px!important;
 }
 
 .qti-customInteraction .abeille .ui-slider-tick {
-  background-color: #ccc!important;
-  width: 1px!important;
-  height: 10px!important;
-  margin-top: -5px!important;
+    background-color: #ccc!important;
+    width: 1px!important;
+    height: 10px!important;
+    margin-top: -5px!important;
 }
 
-.abeille .ui-slider-horizontal .ui-slider-handle{
-     margin-top: -10px!important;   
+.abeille .ui-slider-horizontal .ui-slider-handle {
+    margin-top: -10px!important;
 }
 
-.abeille .ui-slider .ui-state-hover{
-   background-color: #ccc!important;  
+.abeille .ui-slider .ui-state-hover {
+    background-color: #ccc!important;
 }
 
-.abeille .ui-slider .ui-state-focus{
-   background-color: orange!important;  
+.abeille .ui-slider .ui-state-focus {
+    background-color: orange!important;
 }
 
 .abeille .ui-slider .ui-slider-handle {
@@ -137,8 +142,9 @@ Copyright DEPP © 2017 - Ministère de l'éducation nationale
     border: 1px black solid!important;
     cursor: pointer!important;
     padding: 0!important;
-    border-radius:5px!important;
+    border-radius: 5px!important;
 }
+
 
 /* .qti-customInteraction .abeille input[type=range].nuisible:focus {
     outline: none;
@@ -154,7 +160,7 @@ Copyright DEPP © 2017 - Ministère de l'éducation nationale
 }
 
 .qti-customInteraction .abeille input[type=range].nuisible::-webkit-slider-thumb {
-   /*  box-shadow: 2.4px 2.4px 5.2px #0f0f12, 0px 0px 2.4px #1b1b20 !important;
+    /*  box-shadow: 2.4px 2.4px 5.2px #0f0f12, 0px 0px 2.4px #1b1b20 !important;
     border: 3.7px solid #ffffff !important;
     height: 36px !important;
     width: 36px !important;
@@ -166,7 +172,7 @@ Copyright DEPP © 2017 - Ministère de l'éducation nationale
 }
 
 .qti-customInteraction .abeille input[type=range].nuisible:focus::-webkit-slider-runnable-track {
-   /*  background: #0a0a0a; */
+    /*  background: #0a0a0a; */
 }
 
 .qti-customInteraction .abeille input[type=range].nuisible::-moz-range-track {
@@ -188,6 +194,7 @@ Copyright DEPP © 2017 - Ministère de l'éducation nationale
     background: #ffffff;
     cursor: pointer; */
 }
+
 
 /* .qti-customInteraction .abeille input[type=range].nuisible::-ms-track {
     width: 100%;
@@ -231,4 +238,3 @@ Copyright DEPP © 2017 - Ministère de l'éducation nationale
     background: #0a0a0a;
 }
  */
-

@@ -11,9 +11,8 @@ Changing the quantity of pesticide and hornets will modify the population of bee
 
 ## Results
 This PCI is an interactive animation. It collects data to verify if the animation was used : 
-It is just counting the click on the sliders : Pesticide and Hornet.
+It records the sliders position on each move for Pesticide and Hornet.
 The results are in JSON format.
-.pesticide_clicks
-.frelon_clicks
+Example :[{"pesticide_curseur":1,"frelon_curseur":0},{"pesticide_curseur":1,"frelon_curseur":1},{"pesticide_curseur":1,"frelon_curseur":2}]
 
 <img src="https://www.wiquid.fr/wp-content/uploads/2021/12/cropped-cropped-WonderP50.png" alt="Wiquid" title="Wiquid">

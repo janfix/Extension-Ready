@@ -86,9 +86,10 @@ define([
          */
         getResponse: function() {
 
-            var $container = $(this.dom), 
-            //value = "pesticide clics : " + $container.find(".pesticlick").text() + " - frelon clics : " + $container.find(".frelonclick").text();
-            value = '{"pesticide_clicks":'+ $container.find(".pesticlick").text() + ',"frelon_clicks":'+ $container.find(".frelonclick").text()+'}';
+            var $container = $(this.dom),
+                //value = "pesticide clics : " + $container.find(".pesticlick").text() + " - frelon clics : " + $container.find(".frelonclick").text();
+                value = $container.find(".allPosi").text();
+            value = "[" + value.substring(0, value.length - 1) + "]"
             return { base: { string: value } };
         },
         /**
